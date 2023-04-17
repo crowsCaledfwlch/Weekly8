@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Weekly8"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Smart Home Application" Height="450" Width="800" Loaded="frmLoaded">
     <Grid Background="#FFF3EED2">
-        
+        <Image x:Name="image" HorizontalAlignment="Left" Height="220" Margin="10,10,0,0" VerticalAlignment="Top" Width="220" Source="smarthome.jpg" Stretch="Fill"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="359,25,0,0" TextWrapping="Wrap" Text="Smart Home Electric Savings" VerticalAlignment="Top" Height="101" Width="305" TextAlignment="Center" FontSize="36"/>
+        <ComboBox x:Name="cbxMonth" HorizontalAlignment="Left" Margin="479,155,0,0" VerticalAlignment="Top" Width="156" Height="36"/>
+        <StackPanel x:Name="panelStuff" HorizontalAlignment="Left" Height="217" Margin="235,196,0,0" VerticalAlignment="Top" Width="550" Visibility="Collapsed">
+            <Label x:Name="lblSavings" Content="" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="20"/>
+            <Button x:Name="btnStats" Content="Display Statistics" HorizontalAlignment="Center" FontSize="18" Foreground="White">
+                <Button.Background>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
+                </Button.Background>
+            </Button>
+            <StackPanel x:Name="panelIn" Visibility="Collapsed">
+                <Label x:Name="lblAvgSave" Content="" HorizontalAlignment="Center" FontSize="20"/>
+                <Label x:Name="lblBestMonth" Content="" HorizontalAlignment="Center" FontSize="20"/>
+            </StackPanel>
+        </StackPanel>
+        <Button x:Name="button1" Content="QUIT" HorizontalAlignment="Left" Margin="721,349,0,0" VerticalAlignment="Top" Width="64" Height="64" Background="#FF6682B2" Foreground="White" FontSize="20"/>
+
     </Grid>
 </Window>
